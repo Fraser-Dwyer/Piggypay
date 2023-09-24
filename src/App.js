@@ -1,8 +1,23 @@
 import "./App.css";
 import piggypayTitle from "./Images/piggypay.png";
-import piggyGif from "./Images/piggyGIF.gif";
+import piggyGif from "./Images/piggyGIF3.gif";
+import { useState } from "react";
 
 function App() {
+  const [startTime, setStartTime] = useState("");
+  const [displayTime, setDisplayTime] = useState("");
+  const [salary, setSalary] = useState("");
+
+  const handleSetTime = (e) => {
+    e.preventDefault();
+    setDisplayTime(startTime);
+  };
+
+  const handleSetSalary = (e) => {
+    e.preventDefault();
+    // Work out seconds wage here
+  };
+
   return (
     <div>
       <div className="banner">
@@ -13,12 +28,35 @@ function App() {
           <div className="output">
             <h2>You've earned</h2>
             <h1>£5.52</h1>
-            <h2>since 09:04</h2>
+            <h2>since {displayTime}</h2>
           </div>
           <div className="input">
             <img src={piggyGif}></img>
-            <p>Time started:</p>
-            <p>Salary:</p>
+            <form>
+              <label htmlFor="startTime">Time started:</label>
+              <input
+                type="time"
+                id="startTime"
+                value={startTime}
+                onChange={(e) => setStartTime(e.target.value)}
+              />
+              <button onClick={(e) => handleSetTime(e)}>OK</button>
+            </form>
+            <form>
+              <label htmlFor="salary">Salary:</label>
+              <input
+                type="number"
+                pattern="[0-9]*"
+                id="salary"
+                value={salary}
+                onChange={(e) => setSalary(e.target.value)}
+              />
+              <select id="salaryFrequency" name="salaryFrequency">
+                <option value="hourly">Per hour</option>
+                <option value="yearly">Per annum</option>
+              </select>
+              <button onClick={(e) => handleSetSalary(e)}>OK</button>
+            </form>
           </div>
         </div>
       </div>
