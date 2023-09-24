@@ -9,4 +9,55 @@
   display: flex;
   margin: 0px auto;
   padding: 15px;
+  width: 300px;
+}
+
+.background {
+  width: 100%;
+  height: calc(100vh - 136px);
+  background-color: #F2B5D7;
+}
+
+.content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.input {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.output {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+@media only screen and (min-width: 700px) {
+  .banner img {
+    width: 450px;
+  }
+
+  .background {
+    height: calc(100vh - 188px);
+  }
+
+  .content {
+    display: flex;
+    max-width: 1000px;
+  }
+
+  .output {
+    padding-top: 0px;
+    margin-top: 150px;
+    width: 50%;
+  }
+
+  .input {
+    padding-top: 0px;
+    margin-top: 150px;
+    width: 50%;
+  }
 }
