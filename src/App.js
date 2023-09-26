@@ -2,6 +2,7 @@ import "./App.css";
 import piggypayTitle from "./Images/piggypay.png";
 import piggyGif from "./Images/piggyGIF3.gif";
 import { useState } from "react";
+import buttonOink from "./Audio/oink.mp3";
 
 function App() {
   const [startTime, setStartTime] = useState("");
@@ -11,6 +12,7 @@ function App() {
   const handleSetTime = (e) => {
     e.preventDefault();
     setDisplayTime(startTime);
+    new Audio(buttonOink).play();
   };
 
   const handleSetSalary = (e) => {
@@ -32,7 +34,7 @@ function App() {
           </div>
           <div className="input">
             <img src={piggyGif}></img>
-            <form>
+            <form className="startTimeForm">
               <label htmlFor="startTime">Time started:</label>
               <input
                 type="time"
@@ -40,7 +42,7 @@ function App() {
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
               />
-              <button onClick={(e) => handleSetTime(e)}>OK</button>
+              <button onClick={(e) => handleSetTime(e)}>••</button>
             </form>
             <form>
               <label htmlFor="salary">Salary:</label>
