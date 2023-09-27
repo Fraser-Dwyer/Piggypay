@@ -31,6 +31,7 @@
 
 .input img {
   width: 300px;
+  transition: transform .2s;
 }
 
 .output {
@@ -85,8 +86,17 @@
   }
 
   .input img {
-    width: 350px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 30%;
+    margin-bottom: 50px;
   }
+
+  .input img:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+
   .label {
     font-size: 50px;
   }

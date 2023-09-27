@@ -1,8 +1,9 @@
 import "./App.css";
 import piggypayTitle from "./Images/piggypay.png";
-import piggyGif from "./Images/piggyGIF3.gif";
+import piggyGif from "./Images/piggyGIF5.gif";
 import { useState } from "react";
 import buttonOink from "./Audio/oink.mp3";
+import daddyOink from "./Audio/daddyOink.mp3";
 
 function App() {
   const [startTime, setStartTime] = useState("");
@@ -20,6 +21,11 @@ function App() {
     // Work out seconds wage here
   };
 
+  const handleDaddyOink = (e) => {
+    e.preventDefault();
+    new Audio(daddyOink).play();
+  };
+
   return (
     <div>
       <div className="banner">
@@ -33,7 +39,11 @@ function App() {
             <h2>since {displayTime}</h2>
           </div>
           <div className="input">
-            <img src={piggyGif}></img>
+            <img
+              src={piggyGif}
+              alt="Daddpiggybank"
+              onClick={(e) => handleDaddyOink(e)}
+            ></img>
             <form className="startTimeForm">
               <label htmlFor="startTime">Time started:</label>
               <input
