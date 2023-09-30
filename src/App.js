@@ -18,6 +18,7 @@ function App() {
 
   const handleSetSalary = (e) => {
     e.preventDefault();
+    new Audio(buttonOink).play();
     // Work out seconds wage here
   };
 
@@ -54,7 +55,7 @@ function App() {
               />
               <button onClick={(e) => handleSetTime(e)}>••</button>
             </form>
-            <form>
+            <form className="salaryForm">
               <label htmlFor="salary">Salary:</label>
               <input
                 type="number"
@@ -67,7 +68,7 @@ function App() {
                 <option value="hourly">Per hour</option>
                 <option value="yearly">Per annum</option>
               </select>
-              <button onClick={(e) => handleSetSalary(e)}>OK</button>
+              <button onClick={(e) => handleSetSalary(e)}>••</button>
             </form>
           </div>
         </div>
