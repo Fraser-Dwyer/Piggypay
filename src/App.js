@@ -1,6 +1,7 @@
 import "./App.css";
 import piggypayTitle from "./Images/piggypay.png";
 import piggyGif from "./Images/piggyGIF5.gif";
+import errorSymbol from "./Images/warning.png";
 import { useState, useEffect } from "react";
 import buttonOink from "./Audio/oink.mp3";
 import daddyOink from "./Audio/daddyOink.mp3";
@@ -14,6 +15,7 @@ function App() {
   const [totalEarned, setTotalEarned] = useState("0.00");
   const [frames, setFrames] = useState(0);
   const [mons, setMons] = useState(0);
+  const [error, setError] = useState("");
 
   const handleSetTime = (e) => {
     e.preventDefault();
@@ -44,14 +46,19 @@ function App() {
         salaryPerSecond = parseInt(salary) / 3600;
       }
 
-      var minutesWorked = Math.abs(currentMin - startMin);
-      var hoursWorked = Math.abs(currentHour - startHour);
-      var totalSecsWorked =
-        currentSec + 60 * minutesWorked + 3600 * hoursWorked;
-      setMons(totalSecsWorked * salaryPerSecond);
-      setTotalEarned((totalSecsWorked * salaryPerSecond).toFixed(2));
-      var frameRate = 1000 / (salaryPerSecond * 100);
-      setFrames(frameRate);
+      var minutesWorked = currentMin - startMin;
+      var hoursWorked = currentHour - startHour;
+
+      // Time should not be in the future
+      if (hoursWorked > 0 || (hoursWorked === 0 && minutesWorked > 0)) {
+        var totalSecsWorked =
+          currentSec + 60 * minutesWorked + 3600 * hoursWorked;
+        setMons(totalSecsWorked * salaryPerSecond);
+        setTotalEarned((totalSecsWorked * salaryPerSecond).toFixed(2));
+        var frameRate = 1000 / (salaryPerSecond * 100);
+        setFrames(frameRate);
+      } else {
+      }
     } else {
       setFrames(0);
     }
@@ -75,6 +82,15 @@ function App() {
 
   return (
     <div>
+      <div className="backgroundOverlay">
+        <div className="errorContainer">
+          <div className="errorMessageContainer">
+            <img src={errorSymbol} alt="redCross"></img>
+            <p>Hello there</p>
+          </div>
+          <button>Oink</button>
+        </div>
+      </div>
       <div className="banner">
         <img src={piggypayTitle} alt="piggypay"></img>
       </div>
