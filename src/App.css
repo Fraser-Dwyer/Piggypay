@@ -227,23 +227,40 @@
     align-items: center;
   }
 
-  .errorMessageContainer {
+  .imgMsgContainer {
     display: flex;
-    padding: 15px;
-  }  
+    align-items: center;
+  }
 
-  .errorMessageContainer img {
+  .imgMsgContainer img {
     width: 120px;
-    margin-right: 15px;
+    margin: 15px 10px 5px 15px;
   }
 
-  .errorMessageContainer p {
-    font-size: 2rem;
+  .imgMsgContainer p {
+    margin: 15px 5px 5px 15px;
+    font-size: 1.5rem;
+
   }
 
-  .errorContainer button {
-    float: right;
+  .oinkButtonContainer button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
     margin: 5px 15px 15px 15px;
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: bold;
+    width: 50px;
+    height: 33px;
+    border: 2px solid black;
+    border-radius: 5px;
   }
 
+  .oinkButtonContainer button:hover {
+    cursor: pointer;
+    background-color: darkgray;
+    font-size: bolder;
+    border: 3px solid black;
+  }
 }

@@ -84,11 +84,13 @@ function App() {
     <div>
       <div className="backgroundOverlay">
         <div className="errorContainer">
-          <div className="errorMessageContainer">
+          <div className="imgMsgContainer">
             <img src={errorSymbol} alt="redCross"></img>
-            <p>Hello there</p>
+            <p>Please enter a time that is not in the future.</p>
           </div>
-          <button>Oink</button>
+          <div className="oinkButtonContainer">
+            <button>Oink</button>
+          </div>
         </div>
       </div>
       <div className="banner">
