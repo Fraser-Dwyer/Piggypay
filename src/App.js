@@ -16,22 +16,58 @@ function App() {
   const [frames, setFrames] = useState(0);
   const [mons, setMons] = useState(0);
   const [error, setError] = useState("");
+  const [errorMsg, setErrorMsg] = useState("Something went wrong.");
 
   const handleSetTime = (e) => {
     e.preventDefault();
-    setDisplayTime(startTime);
     new Audio(buttonOink).play();
-    handleCalculation();
+    if (isTimeValid()) {
+      setDisplayTime(startTime);
+      handleCalculation();
+    } else {
+      setErrorMsg("Please enter a time that is not in the future.");
+      setError(true);
+    }
+  };
+
+  const handleOinkOkay = (e) => {
+    e.preventDefault();
+    new Audio(buttonOink).play();
+    setError(false);
   };
 
   const handleSetSalary = (e) => {
     e.preventDefault();
     new Audio(buttonOink).play();
-    handleCalculation();
+    if (salary > 0) {
+      handleCalculation();
+    } else {
+      setErrorMsg("Please enter a positive salary.");
+      setError(true);
+    }
+  };
+
+  const isTimeValid = () => {
+    setTime(new Date());
+    var currentHour = time.getHours();
+    var currentMin = time.getMinutes();
+    var currentSec = time.getSeconds();
+    var startHour = parseInt(startTime.slice(0, 2));
+    var startMin = parseInt(startTime.slice(3, 5));
+
+    var minutesWorked = currentMin - startMin;
+    var hoursWorked = currentHour - startHour;
+
+    // Time should not be in the future
+    if (hoursWorked > 0 || (hoursWorked === 0 && minutesWorked > 0)) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   const handleCalculation = () => {
-    if (salary !== null && displayTime !== null && salary > 0) {
+    if (salary > 0 && displayTime !== "") {
       setTime(new Date());
       var currentHour = time.getHours();
       var currentMin = time.getMinutes();
@@ -49,16 +85,12 @@ function App() {
       var minutesWorked = currentMin - startMin;
       var hoursWorked = currentHour - startHour;
 
-      // Time should not be in the future
-      if (hoursWorked > 0 || (hoursWorked === 0 && minutesWorked > 0)) {
-        var totalSecsWorked =
-          currentSec + 60 * minutesWorked + 3600 * hoursWorked;
-        setMons(totalSecsWorked * salaryPerSecond);
-        setTotalEarned((totalSecsWorked * salaryPerSecond).toFixed(2));
-        var frameRate = 1000 / (salaryPerSecond * 100);
-        setFrames(frameRate);
-      } else {
-      }
+      var totalSecsWorked =
+        currentSec + 60 * minutesWorked + 3600 * hoursWorked;
+      setMons(totalSecsWorked * salaryPerSecond);
+      setTotalEarned((totalSecsWorked * salaryPerSecond).toFixed(2));
+      var frameRate = 1000 / (salaryPerSecond * 100);
+      setFrames(frameRate);
     } else {
       setFrames(0);
     }
@@ -82,17 +114,19 @@ function App() {
 
   return (
     <div>
-      <div className="backgroundOverlay">
-        <div className="errorContainer">
-          <div className="imgMsgContainer">
-            <img src={errorSymbol} alt="redCross"></img>
-            <p>Please enter a time that is not in the future.</p>
-          </div>
-          <div className="oinkButtonContainer">
-            <button>Oink</button>
+      {error && (
+        <div className="backgroundOverlay">
+          <div className="errorContainer">
+            <div className="imgMsgContainer">
+              <img src={errorSymbol} alt="redCross"></img>
+              <p>{errorMsg}</p>
+            </div>
+            <div className="oinkButtonContainer">
+              <button onClick={(e) => handleOinkOkay(e)}>Oink</button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className="banner">
         <img src={piggypayTitle} alt="piggypay"></img>
       </div>
