@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4476ca2d.css",
-    "main.js": "/static/js/main.8c0cab34.js",
-    "static/media/piggyCoin.png": "/static/media/piggyCoin.5bd0da2f135b29a8fbc4.png",
-    "static/media/piggyGIF5.gif": "/static/media/piggyGIF5.54ad3f34a0eb60bc43d2.gif",
-    "static/media/warning.png": "/static/media/warning.4b7bb7b40aa281459617.png",
-    "static/media/piggypay.png": "/static/media/piggypay.f85f4d3c2cbb8d31f972.png",
-    "static/media/daddyOink.mp3": "/static/media/daddyOink.eaa099076a4d1b6a2d53.mp3",
-    "static/media/oink.mp3": "/static/media/oink.99366bda175f72bbd08f.mp3",
-    "index.html": "/index.html",
-    "main.4476ca2d.css.map": "/static/css/main.4476ca2d.css.map",
-    "main.8c0cab34.js.map": "/static/js/main.8c0cab34.js.map"
+    "main.css": "/Piggypay/static/css/main.4476ca2d.css",
+    "main.js": "/Piggypay/static/js/main.5c27fda1.js",
+    "static/media/piggyCoin.png": "/Piggypay/static/media/piggyCoin.5bd0da2f135b29a8fbc4.png",
+    "static/media/piggyGIF5.gif": "/Piggypay/static/media/piggyGIF5.54ad3f34a0eb60bc43d2.gif",
+    "static/media/warning.png": "/Piggypay/static/media/warning.4b7bb7b40aa281459617.png",
+    "static/media/piggypay.png": "/Piggypay/static/media/piggypay.f85f4d3c2cbb8d31f972.png",
+    "static/media/daddyOink.mp3": "/Piggypay/static/media/daddyOink.eaa099076a4d1b6a2d53.mp3",
+    "static/media/oink.mp3": "/Piggypay/static/media/oink.99366bda175f72bbd08f.mp3",
+    "index.html": "/Piggypay/index.html",
+    "main.4476ca2d.css.map": "/Piggypay/static/css/main.4476ca2d.css.map",
+    "main.5c27fda1.js.map": "/Piggypay/static/js/main.5c27fda1.js.map"
   },
   "entrypoints": [
     "static/css/main.4476ca2d.css",
-    "static/js/main.8c0cab34.js"
+    "static/js/main.5c27fda1.js"
   ]
 }
