@@ -1,5 +1,5 @@
 .banner {
-  width:100%;
+  width: 100vw;
   height: max-content;
   background-color: #F8457F;
   border-bottom: 3px solid black;
@@ -10,7 +10,7 @@
 .piggyPayContainer img {
   margin: 0px auto;
   padding: 15px;
-  width: 400px;
+  width: 280px;
 }
 
 .piggyCoinContainer img {
@@ -20,8 +20,8 @@
 
 
 .background {
-  width: 100%;
-  height: calc(100vh - 171px);
+  width: 100vw;
+  height: 100vh;
   background-color: #F2B5D7;
 }
 
@@ -31,53 +31,56 @@
 }
 
 .input {
-  width: 100%;
   text-align: center;
   padding-top: 0px;
-  margin-right: 20px;
+  font-family: 'Playpen Sans', cursive;
 }
 
 .input img {
-  width: 300px;
+  width: 30vh;
   transition: transform .2s;
   margin-top: 5px;
   border-radius: 30%;
   margin-bottom: 20px;
 }
 
-.input img:hover {
+.input img:active {
   transform: scale(1.08);
   cursor: pointer;
 }
 
 
 .input label {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .startTimeForm {
-  width: 100%;
-  margin-bottom: 5px;
-  min-width: 600px;
+  width: 100vw;
+  max-width: 600px;
+  margin: 2vw 0vw;
+  display: flex;
+  align-items: flex-start;
 }
 
 .startTimeForm label {
-  width: 180px;
-  float: left;
+  width: 30vw;
+  min-width: 30vw;
+  float:left;
   text-align: right;
+  font-weight: bold;
+  padding: 0px;
 }
 
 .startTimeForm input{
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 5px;
   height: 22px;
-  width: 120px;
-  transform: translate(0px, 2px);
-  margin: 0px 10px;
-  float: left;
+  width: 20vw;
+  margin: 0px 2vw;
+  font-family: 'Playpen Sans', cursive;
 }
 
 .startTimeForm button{
@@ -87,11 +90,11 @@
   border-radius: 100%;
   border: 2px solid black;
   background-color: #969696;
-  transform: translate(2px, 1px);
+  transform: translate(32vw, 0px);
   margin: 1px;
 }
 
-.startTimeForm button:hover {
+.startTimeForm button:active {
   cursor: pointer;
   width: 27px;
   height: 27px;
@@ -102,56 +105,61 @@
 }
 
 .salaryForm {
-  width: 100%;
+  width: 100vw;
+  max-width: 600px;
   display: flex;
+  margin: 2vw 0vw;
+  justify-content: flex-start;
   margin-top: 10px;
-  min-width: 600px;
 }
 
 .salaryForm label {
-  width: 180px;
+  width: 30vw;
+  font-weight: bold;
+  min-width: 30vw;
   float: left;
   text-align: right;
+  padding: 0px;
 }
 
 .salaryForm input{
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 5px;
   height: 22px;
-  width: 120px;
-  transform: translate(0px, 2px);
-  margin: 0px 10px;
+  width: 20vw;
+  margin: 0px 2vw;
   float: left;
+  font-family: 'Playpen Sans', cursive;
 }
 
-.salaryForm select{
+.salaryForm select {
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-left: 5px;
   height: 25px;
-  width: 100px;
-  transform: translate(0px, 2px);
-  margin: 0px 20px 0px 0px;
+  width: 30vw;
+  margin: 0px 1vw 0px 0px;
   float: left;
+  font-family: 'Playpen Sans', cursive;
 }
 
-.salaryForm button{
+.salaryForm button {
   width: 25px;
   height: 25px;
   font-size: 1.2rem;
   border-radius: 100%;
   border: 2px solid black;
   background-color: #969696;
-  transform: translate(4px, 1px);
+  transform: translate(4px, 0px);
   margin: 1px;
 }
 
-.salaryForm button:hover {
+.salaryForm button:active {
   cursor: pointer;
   width: 27px;
   height: 27px;
@@ -165,20 +173,20 @@
   width: 100%;
   text-align: center;
   padding-top: 30px;
-  margin-left: 20px;
 }
 
 .output h1 {
   color: #B5E053;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 2px black;
   margin: auto;
-  font-size: 7rem;
+  font-size: 5rem;
   max-width: 600px;
   overflow-x: auto;
 }
 
 .output h2 {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: 'Playpen Sans', cursive;
 }
 
 .backgroundOverlay {
@@ -190,7 +198,7 @@
 }
 
 .errorContainer {
-  width: 500px;
+  width: 70vw;
   background-color: white;
   border: 8px solid black;
   border-radius: 15px;
@@ -208,25 +216,25 @@
 }
 
 .imgMsgContainer img {
-  width: 120px;
+  width: 80px;
   margin: 15px 10px 5px 15px;
 }
 
 .imgMsgContainer p {
-  margin: 15px 5px 5px 15px;
-  font-size: 1.5rem;
+  margin: 15px 15px 5px 15px;
+  font-size: 1rem;
 }
 
 .oinkButtonContainer button {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  left: 50vw;
+  transform: translate(-25vw, 0%);
   margin: 5px 15px 15px 15px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 1px 5px 5px 5px;
   font-weight: bold;
-  width: 50px;
-  height: 33px;
+  width: 44px;
+  height: 30px;
   border: 2px solid black;
   border-radius: 5px;
   font-family: 'Playpen Sans', cursive;
@@ -251,10 +259,6 @@
     width: 125px;
     margin: 30px 0px;
     transform: translate(-250px, 0px);
-  }
-
-  .background {
-    height: calc(100vh - 188px);
   }
 
   .content {
@@ -403,6 +407,56 @@
     height: 32px;
     margin: 0px;
     background-color: #f5598a;
+  }
+
+  .errorContainer {
+    width: 500px;
+    background-color: white;
+    border: 8px solid black;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    font-family: 'Playpen Sans', cursive;
+  }
+  
+  .imgMsgContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .imgMsgContainer img {
+    width: 120px;
+    margin: 15px 10px 5px 15px;
+  }
+  
+  .imgMsgContainer p {
+    margin: 15px 5px 5px 15px;
+    font-size: 1.5rem;
+  }
+  
+  .oinkButtonContainer button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 5px 15px 15px 15px;
+    font-size: 1rem;
+    padding: 1px 5px 5px 5px;
+    font-weight: bold;
+    width: 50px;
+    height: 33px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'Playpen Sans', cursive;
+  }
+  
+  .oinkButtonContainer button:hover {
+    cursor: pointer;
+    background-color: darkgray;
+    font-size: bolder;
+    border: 3px solid black;
   }
 
 }
