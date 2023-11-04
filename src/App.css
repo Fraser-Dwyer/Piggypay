@@ -9,12 +9,12 @@
   display: flex;
   margin: 0px auto;
   padding: 15px;
-  width: 300px;
+  width: 400px;
 }
 
 .background {
   width: 100%;
-  height: calc(100vh - 136px);
+  height: calc(100vh - 171px);
   background-color: #F2B5D7;
 }
 
@@ -27,23 +27,147 @@
   width: 100%;
   text-align: center;
   padding-top: 0px;
+  margin-right: 20px;
 }
 
 .input img {
   width: 300px;
   transition: transform .2s;
+  margin-top: 5px;
+  border-radius: 30%;
+  margin-bottom: 20px;
+}
+
+.input img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+
+.input label {
+  font-size: 1.5rem;
+}
+
+.startTimeForm {
+  width: 100%;
+  margin-bottom: 5px;
+  min-width: 600px;
+}
+
+.startTimeForm label {
+  width: 180px;
+  float: left;
+  text-align: right;
+}
+
+.startTimeForm input{
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  height: 22px;
+  width: 120px;
+  transform: translate(0px, 2px);
+  margin: 0px 10px;
+  float: left;
+}
+
+.startTimeForm button{
+  width: 25px;
+  height: 25px;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  border: 2px solid black;
+  background-color: #969696;
+  transform: translate(2px, 1px);
+  margin: 1px;
+}
+
+.startTimeForm button:hover {
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  margin: 0px;
+  background-color: #f5598a;
+  transition-duration: 0.05s;
+  transition-timing-function: ease-in-out;
+}
+
+.salaryForm {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  min-width: 600px;
+}
+
+.salaryForm label {
+  width: 180px;
+  float: left;
+  text-align: right;
+}
+
+.salaryForm input{
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  height: 22px;
+  width: 120px;
+  transform: translate(0px, 2px);
+  margin: 0px 10px;
+  float: left;
+}
+
+.salaryForm select{
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  padding-left: 5px;
+  height: 25px;
+  width: 100px;
+  transform: translate(0px, 2px);
+  margin: 0px 20px 0px 0px;
+  float: left;
+}
+
+.salaryForm button{
+  width: 25px;
+  height: 25px;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  border: 2px solid black;
+  background-color: #969696;
+  transform: translate(4px, 1px);
+  margin: 1px;
+}
+
+.salaryForm button:hover {
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  margin: 0px;
+  background-color: #f5598a;
+  transition-duration: 0.05s;
+  transition-timing-function: ease-in-out;
 }
 
 .output {
   width: 100%;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
+  margin-left: 20px;
 }
 
 .output h1 {
   color: #B5E053;
   -webkit-text-stroke: 3px black;
+  margin: auto;
   font-size: 7rem;
+  max-width: 600px;
+  overflow-x: auto;
 }
 
 .output h2 {
@@ -87,7 +211,6 @@
     font-size: 10rem;
     -webkit-text-stroke: 4px black;
     max-width: 600px;
-    overflow: auto;
   }
 
   .input {

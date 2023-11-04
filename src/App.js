@@ -25,7 +25,11 @@ function App() {
       setDisplayTime(startTime);
       handleCalculation();
     } else {
-      setErrorMsg("Please enter a time that is not in the future.");
+      if (startTime === "") {
+        setErrorMsg("Please enter a valid start time.");
+      } else {
+        setErrorMsg("Please enter a time that is not in the future.");
+      }
       setError(true);
     }
   };
@@ -39,8 +43,11 @@ function App() {
   const handleSetSalary = (e) => {
     e.preventDefault();
     new Audio(buttonOink).play();
-    if (salary > 0) {
+    if (salary >= 0) {
       handleCalculation();
+    } else if (salary === undefined) {
+      setErrorMsg("Please enter a salary.");
+      setError(true);
     } else {
       setErrorMsg("Please enter a positive salary.");
       setError(true);
@@ -51,7 +58,6 @@ function App() {
     setTime(new Date());
     var currentHour = time.getHours();
     var currentMin = time.getMinutes();
-    var currentSec = time.getSeconds();
     var startHour = parseInt(startTime.slice(0, 2));
     var startMin = parseInt(startTime.slice(3, 5));
 
@@ -67,11 +73,10 @@ function App() {
   };
 
   const handleCalculation = () => {
-    if (salary > 0 && displayTime !== "") {
+    if (isTimeValid() && salary > 0) {
       setTime(new Date());
       var currentHour = time.getHours();
       var currentMin = time.getMinutes();
-      var currentSec = time.getSeconds();
       var startHour = parseInt(startTime.slice(0, 2));
       var startMin = parseInt(startTime.slice(3, 5));
 
@@ -85,8 +90,7 @@ function App() {
       var minutesWorked = currentMin - startMin;
       var hoursWorked = currentHour - startHour;
 
-      var totalSecsWorked =
-        currentSec + 60 * minutesWorked + 3600 * hoursWorked;
+      var totalSecsWorked = 60 * minutesWorked + 3600 * hoursWorked;
       setMons(totalSecsWorked * salaryPerSecond);
       setTotalEarned((totalSecsWorked * salaryPerSecond).toFixed(2));
       var frameRate = 1000 / (salaryPerSecond * 100);
