@@ -5,6 +5,7 @@ import errorSymbol from "./Images/warning.png";
 import { useState, useEffect } from "react";
 import buttonOink from "./Audio/oink.mp3";
 import daddyOink from "./Audio/daddyOink.mp3";
+import piggyCoin from "./Images/piggyCoin.png";
 
 function App() {
   const [startTime, setStartTime] = useState("");
@@ -132,7 +133,12 @@ function App() {
         </div>
       )}
       <div className="banner">
-        <img src={piggypayTitle} alt="piggypay"></img>
+        <div className="piggyCoinContainer">
+          <img src={piggyCoin} alt="PiggyCoin"></img>
+        </div>
+        <div className="piggyPayContainer">
+          <img src={piggypayTitle} alt="piggypay"></img>
+        </div>
       </div>
       <div className="background">
         <div className="content">

@@ -3,14 +3,21 @@
   height: max-content;
   background-color: #F8457F;
   border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
 }
 
-.banner img {
-  display: flex;
+.piggyPayContainer img {
   margin: 0px auto;
   padding: 15px;
   width: 400px;
 }
+
+.piggyCoinContainer img {
+  visibility: hidden;
+  width: 10px;
+}
+
 
 .background {
   width: 100%;
@@ -182,10 +189,68 @@
   background-color: #00000090;
 }
 
+.errorContainer {
+  width: 500px;
+  background-color: white;
+  border: 8px solid black;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  font-family: 'Playpen Sans', cursive;
+}
+
+.imgMsgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.imgMsgContainer img {
+  width: 120px;
+  margin: 15px 10px 5px 15px;
+}
+
+.imgMsgContainer p {
+  margin: 15px 5px 5px 15px;
+  font-size: 1.5rem;
+}
+
+.oinkButtonContainer button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 5px 15px 15px 15px;
+  font-size: 1rem;
+  padding: 1px 5px 5px 5px;
+  font-weight: bold;
+  width: 50px;
+  height: 33px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: 'Playpen Sans', cursive;
+}
+
+.oinkButtonContainer button:hover {
+  cursor: pointer;
+  background-color: darkgray;
+  font-size: bolder;
+  border: 3px solid black;
+}
+
 
 @media only screen and (min-width: 1000px) {
-  .banner img {
+  .piggyPayContainer img {
     width: 450px;
+  }
+
+  .piggyCoinContainer img {
+    visibility: visible;
+    position: absolute;
+    width: 125px;
+    margin: 30px 0px;
+    transform: translate(-250px, 0px);
   }
 
   .background {
@@ -340,53 +405,4 @@
     background-color: #f5598a;
   }
 
-  .errorContainer {
-    width: 500px;
-    background-color: white;
-    border: 8px solid black;
-    border-radius: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    font-family: 'Playpen Sans', cursive;
-  }
-
-  .imgMsgContainer {
-    display: flex;
-    align-items: center;
-  }
-
-  .imgMsgContainer img {
-    width: 120px;
-    margin: 15px 10px 5px 15px;
-  }
-
-  .imgMsgContainer p {
-    margin: 15px 5px 5px 15px;
-    font-size: 1.5rem;
-  }
-
-  .oinkButtonContainer button {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    margin: 5px 15px 15px 15px;
-    font-size: 1rem;
-    padding: 1px 5px 5px 5px;
-    font-weight: bold;
-    width: 50px;
-    height: 33px;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-family: 'Playpen Sans', cursive;
-  }
-
-  .oinkButtonContainer button:hover {
-    cursor: pointer;
-    background-color: darkgray;
-    font-size: bolder;
-    border: 3px solid black;
-  }
 }
