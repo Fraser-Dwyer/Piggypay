@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Piggypay/static/css/main.89d1a64c.css",
+    "main.css": "/Piggypay/static/css/main.9b82f118.css",
     "main.js": "/Piggypay/static/js/main.f7e65b69.js",
     "static/media/piggyCoin.png": "/Piggypay/static/media/piggyCoin.5bd0da2f135b29a8fbc4.png",
     "static/media/piggyGIF5.gif": "/Piggypay/static/media/piggyGIF5.54ad3f34a0eb60bc43d2.gif",
@@ -9,11 +9,11 @@
     "static/media/daddyOink.mp3": "/Piggypay/static/media/daddyOink.eaa099076a4d1b6a2d53.mp3",
     "static/media/oink.mp3": "/Piggypay/static/media/oink.99366bda175f72bbd08f.mp3",
     "index.html": "/Piggypay/index.html",
-    "main.89d1a64c.css.map": "/Piggypay/static/css/main.89d1a64c.css.map",
+    "main.9b82f118.css.map": "/Piggypay/static/css/main.9b82f118.css.map",
     "main.f7e65b69.js.map": "/Piggypay/static/js/main.f7e65b69.js.map"
   },
   "entrypoints": [
-    "static/css/main.89d1a64c.css",
+    "static/css/main.9b82f118.css",
     "static/js/main.f7e65b69.js"
   ]
 }
