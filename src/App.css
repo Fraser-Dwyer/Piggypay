@@ -10,7 +10,7 @@
 .piggyPayContainer img {
   margin: 0px auto;
   padding: 15px;
-  width: 280px;
+  width: 75vw;
 }
 
 .piggyCoinContainer img {
@@ -18,6 +18,22 @@
   width: 10px;
 }
 
+.credit {
+  background-color: none;
+  position: absolute;
+  font-size: 4vw;
+  padding: 2vw;
+  top: 100%;
+  left: 0%;
+  z-index: 999;
+  transform: translate(0%, -100%);
+  font-family: 'Playpen Sans', cursive;
+}
+
+.credit img {
+  width: 5vw;
+  transform: translate(1vw, 1vw);
+}
 
 .background {
   width: 100vw;
@@ -37,7 +53,7 @@
 }
 
 .input img {
-  width: 30vh;
+  width: 40vw;
   transition: transform .2s;
   margin-top: 5px;
   border-radius: 30%;
@@ -60,38 +76,55 @@
   margin: 2vw 0vw;
   display: flex;
   align-items: flex-start;
+  
 }
 
 .startTimeForm label {
-  width: 30vw;
-  min-width: 30vw;
+  width: 25vw;
+  min-width: 25vw;
   float:left;
   text-align: right;
   font-weight: bold;
   padding: 0px;
+  font-size: 3vw;
 }
 
 .startTimeForm input{
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 2.5vw;
   padding-left: 5px;
   height: 22px;
   width: 20vw;
   margin: 0px 2vw;
+  float: left;
   font-family: 'Playpen Sans', cursive;
 }
 
-.startTimeForm button{
+.startTimeForm select {
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  padding-left: 5px;
+  height: 26px;
+  margin: 0px 1vw 0px 0px;
+  float: left;
+  font-family: 'Playpen Sans', cursive;
+  visibility: hidden;
+}
+
+.startTimeForm button {
   width: 25px;
   height: 25px;
-  font-size: 1.2rem;
+  font-size: 2.5vw;
   border-radius: 100%;
   border: 2px solid black;
   background-color: #969696;
-  transform: translate(32vw, 0px);
+  transform: translate(4px, 0px);
   margin: 1px;
+  overflow: visible;
 }
 
 .startTimeForm button:active {
@@ -114,9 +147,10 @@
 }
 
 .salaryForm label {
-  width: 30vw;
+  width: 25vw;
   font-weight: bold;
-  min-width: 30vw;
+  font-size: 3vw;
+  min-width: 25vw;
   float: left;
   text-align: right;
   padding: 0px;
@@ -126,7 +160,7 @@
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 2.5vw;
   padding-left: 5px;
   height: 22px;
   width: 20vw;
@@ -139,10 +173,9 @@
   border: 2px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 15px;
   padding-left: 5px;
-  height: 25px;
-  width: 30vw;
+  height: 26px;
   margin: 0px 1vw 0px 0px;
   float: left;
   font-family: 'Playpen Sans', cursive;
@@ -151,7 +184,7 @@
 .salaryForm button {
   width: 25px;
   height: 25px;
-  font-size: 1.2rem;
+  font-size: 2.5vw;
   border-radius: 100%;
   border: 2px solid black;
   background-color: #969696;
@@ -179,13 +212,13 @@
   color: #B5E053;
   -webkit-text-stroke: 2px black;
   margin: auto;
-  font-size: 5rem;
+  font-size: 20vw;
   max-width: 600px;
   overflow-x: auto;
 }
 
 .output h2 {
-  font-size: 2rem;
+  font-size: 6vw;
   font-family: 'Playpen Sans', cursive;
 }
 

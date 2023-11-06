@@ -132,6 +132,10 @@ function App() {
           </div>
         </div>
       )}
+      <div className="credit">
+        By Fraser And Laura
+        <img src={piggyCoin} alt="PiggyCoin"></img>
+      </div>
       <div className="banner">
         <div className="piggyCoinContainer">
           <img src={piggyCoin} alt="PiggyCoin"></img>
@@ -162,6 +166,15 @@ function App() {
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
               />
+              <select
+                id="salaryFrequency"
+                name="salaryFrequency"
+                value={salaryOption}
+                onChange={(e) => setSalaryOption(e.target.value)}
+              >
+                <option value="yearly">Per annum</option>
+                <option value="hourly">Per hour</option>
+              </select>
               <button onClick={(e) => handleSetTime(e)}>••</button>
             </form>
             <form className="salaryForm">
