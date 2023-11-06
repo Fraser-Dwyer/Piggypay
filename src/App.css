@@ -89,18 +89,38 @@
   font-size: 3vw;
 }
 
-.startTimeForm input{
-  border: 2px solid black;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 2.5vw;
-  padding-left: 5px;
-  height: 22px;
-  width: 20vw;
-  margin: 0px 2vw;
-  float: left;
-  font-family: 'Playpen Sans', cursive;
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */
+  .startTimeForm input{
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2.5vw;
+    padding-left: 5px;
+    height: 22px;
+    width: 22vw;
+    margin: 0px 2vw;
+    float: left;
+    font-family: 'Playpen Sans', cursive;
+  }
 }
+
+@supports not (-webkit-overflow-scrolling: touch) {
+  /* CSS for other than iOS devices */
+  .startTimeForm input{
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2.5vw;
+    padding-left: 5px;
+    height: 22px;
+    width: 20vw;
+    margin: 0px 2vw;
+    float: left;
+    font-family: 'Playpen Sans', cursive;
+  }
+}
+
 
 .startTimeForm select {
   border: 2px solid black;
@@ -167,11 +187,6 @@
   margin: 0px 2vw;
   float: left;
   font-family: 'Playpen Sans', cursive;
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-  padding: 0;
-  margin: 0;
 }
 
 .salaryForm select {

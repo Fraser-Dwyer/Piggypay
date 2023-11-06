@@ -132,10 +132,6 @@ function App() {
           </div>
         </div>
       )}
-      <div className="credit">
-        By Fraser And Laura
-        <img src={piggyCoin} alt="PiggyCoin"></img>
-      </div>
       <div className="banner">
         <div className="piggyCoinContainer">
           <img src={piggyCoin} alt="PiggyCoin"></img>
@@ -198,6 +194,10 @@ function App() {
               <button onClick={(e) => handleSetSalary(e)}>••</button>
             </form>
           </div>
+        </div>
+        <div className="credit">
+          By Fraser And Laura
+          <img src={piggyCoin} alt="PiggyCoin"></img>
         </div>
       </div>
     </div>
